@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Header from './Header'
+// import Bline from './Bline'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const instructor_names = ["steven", "caryn", "greg"]
+
+// let instructors = instructor_names.map(function(name){
+//   return <Header name={name} />
+// })
+
+// console.log(instructors)
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div>
+    <Header instructors={instructor_names} />
+  </div>,
   document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
