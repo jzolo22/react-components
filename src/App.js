@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header'
+import InstructorContainer from './Containers/InstructorContainer'
+import AnimeContainer from './Containers/AnimeContainer'
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  state = { instructor: {} }
+
+  appClickHandler = (instructor_obj) => {
+      this.setState({ instructor: instructor_obj })
+  }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <InstructorContainer appClickHandler={this.appClickHandler} />
+        <AnimeContainer instructor={this.state.instructor} />
+      </div>
+      );
+
+  }
 }
-
-export default App;
+  
+  export default App;
+  

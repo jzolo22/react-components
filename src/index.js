@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Header from './Header'
-// import Bline from './Bline'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import Header from './Components/Header'
+// import Bline from './Bline'
+// import InstructorContainer from './Containers/InstructorContainer';
 
-const instructor_names = ["steven", "caryn", "greg"]
+// const instructor_names = ["steven", "caryn", "greg"]
 
 // let instructors = instructor_names.map(function(name){
 //   return <Header name={name} />
@@ -16,7 +17,7 @@ const instructor_names = ["steven", "caryn", "greg"]
 
 ReactDOM.render(
   <div>
-    <Header instructors={instructor_names} />
+    <App />
   </div>,
   document.getElementById('root')
 );
